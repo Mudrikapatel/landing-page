@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple landing page using html css </title>
+    <link rel="stylesheet" href="6.css"/>
+    <link rel="icon"href=".vscode/macky's.tech.png">
+    <style type="text/css">
+        *{ padding: 0; margin: 0; box-sizing: border-box;}
+        header{
+            width:100% ;
+            height: 100vh;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),                                            
+                         url('IMG-20240828-WA0002.jpg');
+            background-size: cover;
+            font: 1em sans-serif;
+        }
+        nav{
+            width: 100%;
+            height: 100px;
+            
+            color: white;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo {
+        font-size: 2em;
+        letter-spacing: 1px;
+        }
+        .menu a{
+           text-decoration:none ; 
+           color:blue;
+           padding: 10px 20px ;
+           font-size: 20px;
+           position: relative;
+        }
+        .menu a::before{
+            content: '';
+            position: absolute;
+            top:0 ;
+            left: 0;
+            width:100% ;
+            height: 100%;
+           border-bottom: 2px solid rgb(91, 211, 82);
+           transition: 0.4s linear;
+        }
+        .menu a:hover::before{
+           width:90% ;
+        }
+        .Join a{
+            text-decoration:none ; 
+           color:blue;
+           padding: 10px 20px ;
+           font-size: 20px;
+           background: rgb(91, 211, 82) ;
+           border-radius:8px ;
+           transition: 0.4s ;
+        }
+        .Join a:hover{
+            background: transparent;
+            border: 1px solid rgb(91, 211, 82) ;
+        }
+        .h-txt{
+            min-width:650px ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%) ;
+            text-align: left;
+            color:black;
+            font: sans-serif;
+            text-align: center;
+        }
+        .h-txt span{
+            letter-spacing: 5px;
+            font-size: 1em;
+            text-align: left;
+        }
+        .h-txt h1{
+            font-size: 2em ;
+        }
+        .h-txt a{
+            text-decoration:none ;
+            background:yellow ;
+            padding:10px 10px ;
+            letter-spacing:2px ;
+            font-size: 13px;
+            position: relative;
+            cursor: pointer;
+            font: sans-serif;
+        }
+        .h-txt a:hover{
+            background: transparent;
+            border: 1px solid rgb(91, 211, 82) ;
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            border: 1px solid yellow;
+            background: transparent;
+        }
+        .hero-btn:hover{
+            border: 1px solid yellow;
+            background:yellow ;
+            transition: 1s;
+        }
+        .course{
+            width:80%;
+            margin: auto;
+            text-align: center;
+            padding-top:100px ;
+            
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        p{
+            color:black;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding:10px;
+        }
+        .row{
+            margin-top: 5%;
+            display:flex;
+            justify-content:space-between;
+        }
+        .course-col{
+            flex-basis:31%;
+            background:lightpink;
+            border-radius:10px ;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing:content-box;
+            transition: 0.5s;
+        }
+        
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .course-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+        @media(max-width:700px){
+            .row{
+                flex-direction: column;
+            }
+        }
+        .about{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top:50px ;
+        }
+        .about-col{
+            flex-basis:32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .about-col img{
+            width:100%;
+            display: block;
+        }
+        .layer{
+            background:transparent;
+            height: 100%;
+            width: 100% ;
+            position:absolute;
+            transition: 0.5s;
+    
+        }
+        .layer:hover{
+         background:rgba(0,0,0,0.2);
+        }
+        .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color:black;
+            font-size:26px;
+            bottom: 0;
+            left:50% ;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .layer:hover h3{
+            bottom: 49%;
+            opacity:1 ;
+        }
+        .Service{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding-top:100px ;
+
+        }
+        .facilities-col{
+            flex-basis: 31%;
+            border-radius:10px ;
+            margin-bottom: 5%;
+            text-align:center ;
+            font-size: large;
+            background: rgb(91, 211, 82);
+            box-sizing: content-box;
+        }
+        .Service{
+            font-size:x-large;
+            font:sans-serif;
+            letter-spacing: 3;
+            font:bold;
+            background:palevioletred;
+            width: auto;
+        }
+    </style>
+
+</head>
+<body>
+   <header>
+      <nav>
+        <div class="logo">
+        <img width="250px"; img src="IMG-20240828-WA0005.jpg">
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Service</a>
+          <a href="#">Pages</a>
+          <a href="#">Contact</a>
+          <a href="#">Internship</a>
+        </div>
+        <div class="Join Us">
+        <a href="#">Join Us</a>  
+        </div>
+      </nav>  
+      <section class="h-txt">
+        <h1>No.01 service based company in India</h1>
+        <span>Macky's Tech IT services refers to the application of business and technical expertise to enable organizations in the creation, management and optimization of or access to information and business processes.</span><br> </br>
+         <a href="#">Read More</a>
+         <a href="#" class="hero-btn">Contact Us</a>
+   </header>
+ </section>
+
+ <section class="course">
+    <h1>Course We Offer</h1>
+
+    <div class="row">
+       <div class="course-col">
+       <h2>Internships</h2>
+       <p>nternship services connect clients with opportunities for practical work experience, enhancing skills and fostering career development in various industries.</p>
+    </div>
+    <div class="course-col">
+      <h2>Web Design</h2>
+      <p>Web design services create visually appealing and user-friendly websites, ensuring an online presence that captivates users and supports business objectives.</p>
+    </div>
+    <div class="course-col">
+       <h2>Social Media Marketing</h2>
+       <p>Social media marketing services promote businesses through strategic content and ads on social platforms, engaging audiences and driving growth.</p>
+     </div>
+    <div class="course-col">
+       <h2>Cyber Security</h2>
+       <p>Cybersecurity services safeguard clients' digital assets, data, and systems from threats, ensuring protection against cyberattacks and data breaches.</p>
+    </div>
+    <div class="course-col">
+       <h2>App Development</h2>
+       <p>App development services create customized mobile or web applications for clients, addressing their specific needs, user experience, and business goals.</p>
+    </div>
+    </div>
+     </section> 
+    <section class="about">
+      <h1>#1 Digital solution with 03 years of experience</h1>
+       <p>Macky's Tech provide a range of information technology services to clients, including tech support, network management, software development, cybersecurity, and consulting to enhance their IT infrastructure and operations.</p>
+           <div class="row">
+           <div class="about-col">
+            <img src="IMG-20240828-WA0006.jpg">
+            <div class="layer">
+            <h3>Web  Development</h3>
+          </div>
+           </div>
+          <div class="about-col">
+           <img src="IMG-20240828-WA0007.jpg">
+          <div class="layer">
+            <h3>Cyber Security</h3>
+          </div>
+        </div>
+        <div class="about-col">
+            <img src="IMG-20240828-WA0002.jpg">
+            <div class="layer">
+            <h3>App Development</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section class="Service"> 
+      <h1> Service</h1>
+     <p>What Solutions We Provide</p>
+
+     <div class="row">
+        <div class="facilities-col">
+            <h3>Cyber Security</h3>
+            <p>Cybersecurity services safeguard clients' digital assets, data, and systems from threats, ensuring protection against cyberattacks and data breaches.</p>
+        </div>
+        <div class="facilities-col">
+            <h3>Email Marketing</h3>
+            <p>Email marketing services design, execute, and optimize email campaigns, delivering targeted messages to subscribers for brand promotion and engagement</p>
+        </div>
+        <div class="facilities-col">
+            <h3>App Development</h3>
+            <p>App development services create customized mobile or web applications for clients, addressing their specific needs, user experience, and business goals.</p>
+        </div>
+
+     </div>
+    </section>
+</body>
+</html>
+
+
+ 
