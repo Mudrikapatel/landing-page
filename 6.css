@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+   
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+   text-align: left;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+   
+}
+
+.logo {
+    width: 250px; /* Adjust the logo size */
+    text-align: left;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+h2 {
+    color: #35424a;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font: 1em sans-serif;
+
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+   
+}
+
+button:hover {
+    background: #2c3e50;
+}
+
+.services-section, .about-section, .additional-services {
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-card {
+    background: #e2e2e2;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 10px;
+    min-width: 30%; /* Ensures cards don't get too narrow */
+    color:lightcoral;
+   
+}
+
+.images-space {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.service-image {
+    width: 30%; /* Adjust size as needed */
+    border-radius: 5px;
+
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #35424a;
+    color: #ffffff;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 20px;
+    
+}
